@@ -13,6 +13,7 @@ public class Client {
         DataOutputStream toServer = new DataOutputStream(socket.getOutputStream());
         toServer.writeBytes(message +"\n");
         System.out.println("new line");
+        System.out.println("t-001");
         BufferedReader fromServer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         String response = fromServer.readLine();
         System.out.println(response);
