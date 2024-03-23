@@ -16,6 +16,8 @@ public class Server {
             System.out.println("Received: " + line);
             DataOutputStream toClient = new DataOutputStream(socket.getOutputStream());
             toClient.writeBytes("Hello world\n");
+            System.out.println("Sent: Hello world");
+            System.out.println("Closing connection");
             socket.close();
         }
     }
