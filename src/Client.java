@@ -12,7 +12,7 @@ public class Client {
         String message = sc.nextLine();
         DataOutputStream toServer = new DataOutputStream(socket.getOutputStream());
         toServer.writeBytes(message +"\n");
-
+        System.out.println("new line");
         BufferedReader fromServer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         String response = fromServer.readLine();
         System.out.println(response);
